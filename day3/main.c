@@ -24,6 +24,15 @@ int main(void) {
 
 int main(void) {
 
+	int num;
+	printf("정수 입력: ");
+	scanf_s("%d", &num);
+
+	if (num < 0)
+		printf("입력값 0보다 작음\n");
+
+	else printf("입력값 0보다 작지 않음(크거나 같음)");
+
 	
 	
 	return 0;
