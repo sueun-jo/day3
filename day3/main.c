@@ -1,83 +1,23 @@
 #include <stdio.h>
 
-
- /*do while 예제
-int main(void) {
-
-	int total = 0;
-	int num = 0;
-
-	do
-	{
-		printf("정수 입력 (0 to quit): ");
-		scanf_s("%d", &num); //더할 num입력 받음
-
-		total += num; //total에 입력받은 숫자 더해준다
-
-	} while (num != 0); //num이 0이 아니면 계속 반복, 0이면 반복종료
-
-	printf("total: %d", total); //total값 출력
-
-	return 0;
-}
-*/
-
-/* if else 예제
-int main(void) {
-
-	int num;
-	printf("정수 입력: ");
-	scanf_s("%d", &num);
-
-	if (num < 0)
-		printf("입력값 0보다 작음\n");
-
-	else printf("입력값 0보다 작지 않음(크거나 같음)");
-
-	
-	
-	return 0;
-}
-*/
-
-// 3항 연산자 예제
-
-
-/*int main(void) {
-		int num, abs; //abs는 절댓값을 의미한다.
-
-		printf("정수 입력: ");
-		scanf_s("%d", &num);
-		
-		 // abs = num > 0 ? num : num * (-1); //num이 양수이면 절댓값은 num, num이 0보다 크지 않으면(음수이면) -1을 곱해 절댓값을 구한다.
-
-		if (num > 0)
-			abs = num;
-		else abs = num * (-1);
-
-		printf("절댓값: %d", abs);
-
-		return 0;
-} */
-
-int smallest(int a, int b, int c) {
-	int min = (a > b) ? b : a;
-	return (min > c) ? c : min;
-}
-
-int biggest(int a, int b, int c) {
-	int max = (a > b) ? a : b; 
-	return max > c ? max : c;
-}
-
 int main(void)
 {
-	int x, y, z;
-	printf("3개 정수 입력: ");
-	scanf_s("%d %d %d", &x, &y, &z);
-	
-	printf("%d %d %d 중 제일 작은 숫자는 %d, 가장 큰 숫자는 %d입니다.", x, y, z, smallest(x,y,z), biggest(x,y,z));
-	
+	int num1 = 100, num2 = 100;
+	int *pnum;
+
+	pnum = &num1;
+	(pnum) += 30;
+	printf("Address of num1 : %p\n", &num1);
+	printf("value of pnum : %p\n", pnum);
+	printf("Address of pnum : %p\n", &pnum);
+
+	pnum = &num2;
+	(*pnum) += 30;
+	printf("Address of num2 : %p\n", &num2);
+	printf("value of pnum : %p\n", pnum);
+	printf("Address of pnum : %p\n", &pnum);
+
+	printf("num1 : %d, num2 : %d\n", num1, num2);
+
 	return 0;
 }
-	
