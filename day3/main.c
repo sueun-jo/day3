@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+ /*do while 예제
 int main(void) {
 
 	int total = 0;
@@ -16,5 +18,13 @@ int main(void) {
 
 	printf("total: %d", total); //total값 출력
 
+	return 0;
+}
+*/
+
+int main(void) {
+
+	
+	
 	return 0;
 }
