@@ -43,15 +43,41 @@ int main(void) {
 // 3항 연산자 예제
 
 
-int main(void) {
+/*int main(void) {
 		int num, abs; //abs는 절댓값을 의미한다.
 
 		printf("정수 입력: ");
-		scanf("%d", &num);
+		scanf_s("%d", &num);
 		
-		abs = num > 0 ? num : num * (-1); //num이 양수이면 절댓값은 num, num이 0보다 크지 않으면(음수이면) -1을 곱해 절댓값을 구한다.
+		 // abs = num > 0 ? num : num * (-1); //num이 양수이면 절댓값은 num, num이 0보다 크지 않으면(음수이면) -1을 곱해 절댓값을 구한다.
+
+		if (num > 0)
+			abs = num;
+		else abs = num * (-1);
+
 		printf("절댓값: %d", abs);
 
 		return 0;
+} */
+
+int smallest(int a, int b, int c) {
+	int min = (a > b) ? b : a;
+	return (min > c) ? c : min;
+}
+
+int biggest(int a, int b, int c) {
+	int max = (a > b) ? a : b; 
+	return max > c ? max : c;
+}
+
+int main(void)
+{
+	int x, y, z;
+	printf("3개 정수 입력: ");
+	scanf_s("%d %d %d", &x, &y, &z);
+	
+	printf("%d %d %d 중 제일 작은 숫자는 %d, 가장 큰 숫자는 %d입니다.", x, y, z, smallest(x,y,z), biggest(x,y,z));
+	
+	return 0;
 }
 	
