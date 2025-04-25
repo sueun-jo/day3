@@ -22,6 +22,7 @@ int main(void) {
 }
 */
 
+/* if else 예제
 int main(void) {
 
 	int num;
@@ -37,3 +38,20 @@ int main(void) {
 	
 	return 0;
 }
+*/
+
+// 3항 연산자 예제
+
+
+int main(void) {
+		int num, abs; //abs는 절댓값을 의미한다.
+
+		printf("정수 입력: ");
+		scanf("%d", &num);
+		
+		abs = num > 0 ? num : num * (-1); //num이 양수이면 절댓값은 num, num이 0보다 크지 않으면(음수이면) -1을 곱해 절댓값을 구한다.
+		printf("절댓값: %d", abs);
+
+		return 0;
+}
+	
